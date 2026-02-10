@@ -1,0 +1,1 @@
+0 */1 * * * /path/to/venv/bin/python3 /path/to/venv/nereus.py /path/to/venv/src/.clients > /path/to/venv/errorLogs/ouput.log 2>&1
