@@ -1,6 +1,5 @@
 # Nereus
 **Author**: Keane Flynn\
-**Organization**: Summit Lake Paiute Tribe\
 **Date**: 05/07/2025\
 **Contact**: keaneflynn1@gmail.com
 
@@ -17,11 +16,10 @@ and append to a postgres database. This program functions by creating a socket
 connection to a specified IP addres and port and sending a Biomark-specified 
 three-letter command to invoke a serial dump of PIT tag. The socket connection
 will then grab and parse this serial data into a database-appendable format.
-This data is then passed into the SLPT PIT tag database.
+This data is then passed into a PIT tag database.
 
 ## Hardware & Configuration
-The Nereus program is capable of runnning on any basic computer, however the Tribe
-runs it on the server node at the SCS data center at UNR. To allow for this program 
+The Nereus program is capable of runnning on any basic computer/server node. To allow for this program 
 to grab data from a PIT antenna reader, the reader in question must be a Biomark 
 model IS1001 reader with the Remote Communication Board equipped (I have personally
 only made this work on the 24v variant of the IS1001, but the user manual doesn't
@@ -72,7 +70,7 @@ All input parameters can be found using the `python nereus.py -h` flag
 ## How To Use
 Issue the following command in your terminal block to clone the repository:
 ```
-git clone https://github.com/SummitLakeNRD/Nereus.git
+git clone https://github.com/keaneflynn/Nereus.git
 ```
 You will then need to change directory into the newly downloaded repo `cd Nereus/`
 
@@ -94,9 +92,7 @@ This program is made to run as a cronjob, but can be run from the terminal
 manually in the following way: `python nereus.py src/.clients`
 
 ## Running From Crontab
-This program is primarily designed to be run on a server as a cronjob.
-To SLPT staff, in short, this means that given the proper instruction, it will 
-run continuously on start up and restart if the program crashes for some reason. 
+This program is primarily designed to be run on a server as a cronjob. 
 To make this work, you will need to modify the crontab file using the following 
 command:
 ```
